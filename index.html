@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSON-API CRUD</title>
+</head>
+
+
+<button onclick="postData()">Post</button>
+<button onclick="getData()">Get</button>
+<button onclick="putData()">PUT</button>
+<button onclick="deleteData()">Delete</button>
+
+
+<body>
+    <script>
+      async function postData(){
+        let res = await fetch("http://localhost:3000/products",
+        {
+            method:"POST",
+            body:JSON.stringify({
+            "name":"Samsung",
+            "price":30000
+            }),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+        let data = await res.json()
+        console.log(data)
+      }
+
+      async function getData(){
+        let res = await fetch("http://localhost:3000/products")
+        let data = await res.json()
+        console.log(data)
+      }
+
+
+      async function putData(){
+        let res = await fetch("http://localhost:3000/products/167f",
+        {
+            method:"PUT",
+            body:JSON.stringify({
+            "name":"Lenovo",
+            "price":35000
+            }),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+        let data = await res.json()
+        console.log(data)
+      }
+
+      async function deleteData(){
+        let res = await fetch("http://localhost:3000/products/e872",
+        {
+            method:"DELETE",
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+        let data = await res.json()
+        console.log(data)
+      }
+
+    
+
+    </script>
+
+
+</body>
+</html>

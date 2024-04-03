@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "redme note 11",
+      "price": 20000
+    },
+    {
+      "id": "2",
+      "name": "Vivo pro",
+      "price": 25000
+    },
+    {
+      "name": "Lenovo",
+      "price": 35000,
+      "id": "167f"
+    },
+    {
+      "id": "e872",
+      "name": "Samsung",
+      "price": 30000
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "date": "02/4/2024"
+    },
+    {
+      "id": "2",
+      "date": "03/4/2024"
+    }
+  ]
+}
